@@ -1,3 +1,93 @@
-<p>
-  search works!
-</p>
+<div class="search">
+  <div class="container">
+
+    <div class="search__box search__box--location">
+      <label for="city" class="search__label">City, address, zip code</label>
+
+      <input id="city" type="text" class="search__input" value="Victoria, BC">
+
+    </div>
+
+    <div class="search__box">
+      <label class="search__label">Condition</label>
+
+      <div class="search__checkbox-list">
+
+        <label class="search__checkbox-label">
+          <input type="checkbox" class="search__checkbox-hidden" [checked]="true">
+          <span class="search__checkbox-item"></span>
+          Used
+        </label>
+
+        <label class="search__checkbox-label">
+          <input type="checkbox" class="search__checkbox-hidden">
+          <span class="search__checkbox-item"></span>
+          New
+        </label>
+
+      </div>
+
+    </div>
+
+    <div class="search__box search__box--select">
+      <label for="type" class="search__label">Type</label>
+
+      <div class="search__select-wrap">
+        <div class="search__select-icon search__select-icon--sport"></div>
+        <select id="type" class="search__select">
+          <option value="sport" class="search__select-option">
+            Sport
+          </option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="search__box search__box--select">
+      <label for="make" class="search__label">Make</label>
+
+      <div class="search__select-wrap">
+        <div class="search__select-icon search__select-icon--hd"></div>
+        <select id="make" class="search__select">
+          <option value="hd" class="search__select-option">
+            Harley-Davidson
+          </option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="search__box search__box--select search__box--small">
+      <label for="years" class="search__label">Year</label>
+
+      <div class="search__select-wrap">
+        <select id="years" class="search__select">
+          <option value="hd" class="search__select-option">
+            Last 5 years
+          </option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="search__box search__box--price">
+      <label class="search__label search__label--price">Price</label>
+
+      <div class="search__price">
+        <nouislider
+          type="integer"
+          [(ngModel)]="range"
+          [connect]="true"
+          [min]="0"
+          [max]="100"
+          [config]="sliderConfig"
+        >
+        </nouislider>
+      </div>
+
+    </div>
+
+    <button class="search__button">Search</button>
+
+  </div>
+</div>

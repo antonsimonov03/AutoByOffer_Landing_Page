@@ -1,0 +1,67 @@
+.units {
+  font-family: Gilroy, Serif, sans-serif;
+  color: rgb(97, 99, 101);
+  display: flex;
+  flex-flow: column nowrap;
+
+  &__header {
+    font-weight: bold;
+    font-size: 3rem;
+    margin-top: 85px;
+    text-align: center;
+  }
+
+  &__list {
+    margin-top: 96px;
+    margin-bottom: 108px;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 0 12px 46px;
+
+    &-img {
+      width: 400px;
+      height: 234px;
+      background: url("../../assets/img/unit.png") no-repeat center;
+      background-size: contain;
+    }
+
+    &-header {
+      margin: 16px 0 22px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    &-description {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__btn {
+    width: 190px;
+    height: 37px;
+    background: transparent;
+    border: 2px solid rgb(97, 99, 101);
+    color: rgb(97, 99, 101);
+    border-radius: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 8px 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(97, 99, 101);
+      border: none;
+      color: #fff
+    }
+  }
+
+}

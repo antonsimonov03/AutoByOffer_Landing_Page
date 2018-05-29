@@ -1,1 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/font-awesome/css/font-awesome.css";
+@import "../node_modules/nouislider/distribute/nouislider.min.css";
+@import "assets/styles/normalize";
+@import 'assets/styles/bootstrap-override';
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+@font-face {
+  font-family: Gilroy;
+  src: url("assets/fonts/Gilroy-Light.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url("assets/fonts/Gilroy-ExtraBold.otf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+// Chrome outline removal
+*:focus {
+  outline: none;
+}
+
+// Range slider native style overriding
+nouislider {
+  position: relative;
+  top: .9rem;
+}
+
+.noUi-horizontal {
+  height: 1px;
+  border: none;
+}
+
+.noUi-base {
+  .noUi-connect {
+    background-color: #616365;
+  }
+
+  .noUi-handle {
+    background-color: #0065ed;
+    border-radius: 50%;
+    border: none;
+    box-shadow: none;
+    display: table;
+    height: 12px;
+    margin-top: -(15px/2) + 3px/2 - 1;
+    padding: 0;
+    position: absolute;
+    top: 1px;
+    right: -10px !important;
+    width: 12px;
+    z-index: 2;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    .noUi-horizontal & {
+      cursor: ew-resize;
+    }
+
+    &:hover {
+      background-color: lighten(#0065ed, 10%);
+    }
+
+    &.noUi-active {
+      background-color: darken(#0065ed, 10%);
+      z-index: 3;
+    }
+  }
+
+  .noUi-tooltip {
+    transform: translate(-50%, 0%);
+    position: absolute;
+    top: -30px;
+    font-size: .6rem;
+    background: url("assets/icons/tooltip.svg") no-repeat center;
+    background-size: contain;
+    color: #fff;
+    border: none;
+    width: 30px;
+    height: 30px;
+
+  }
+}

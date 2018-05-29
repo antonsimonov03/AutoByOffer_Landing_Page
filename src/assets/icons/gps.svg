@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23" width="23" height="23">
+	<defs>
+		<image width="23" height="23" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAMAAADX9CSSAAAAk1BMVEUAZu4Fae4AZu4CaO4je/AJa+8BZu4BZu4Ja+8Gau4Gau4qf/EEaO4Rce8Vcu8RcO8qf/EGae4Gae4Hau8QcO8Pb+8Ia+8kfPAbdvADaO4bdvAlfPELbe8Mbe8KbO8bdvABZ+4CZ+4XdPAcd/AJbO8Mbe8kfPElfPEIa+8Pb+8qf/Epf/EFae4EaO4Hau4Hau8JbO9co3UKAAAAMXRSTlMA+v/9W/P//vL49wz71sbXBvj59d3f9FKk/KFJ7Orwnv79vZzx6U5E9eASF/n89/bwNVtxVAAAANlJREFUeJxtktcWgkAMROMgKIIiKCI2sFfU//86s4WVlgcSLnN2JwlEJnroUVdYsNqwbzsABsN+HbsoY1ShntD640ngc3amhjMOPaWI+EOJZ8DcaGJgoaoEcDktUyddcQ6BteRDgJ8beeuWK2An+UD0s9R2MtFfztRPgTHRXnNuLQBSn8TLgcj4JzrIpPVWU6/PzzQ/lucTnaSfrcTnip+L8r9i/5nyf1WN3YDY9HsH7Mp8ooesnq/KfNQ8i2ASFGIH/3kSvY3/T30xyTdnmO8u1IrO/VLjf/gBKkoJst88lsEAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="ic_my_location_black_24dp_2x copy" href="#img1" x="0" y="0" />
+</svg>
