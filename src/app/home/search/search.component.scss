@@ -23,7 +23,7 @@
         display: block;
         width: 20px;
         height: 20px;
-        background: url("../../../assets/icons/gps.svg") no-repeat center;
+        background: url("../../../assets/icons/gps.png") no-repeat center;
         background-size: contain;
         position: absolute;
         top: 20px;
@@ -34,11 +34,6 @@
     &--select {
       border-bottom: 1px solid #fff;
       padding-bottom: 4px;
-    }
-
-    &--small {
-      width: 125px;
-      padding-bottom: 8px;
     }
 
   }
@@ -69,7 +64,7 @@
 
     &:checked ~ .search__checkbox-item {
       border: none;
-      background: url("../../../assets/icons/check.svg") no-repeat center;
+      background: url("../../../assets/icons/check.png") no-repeat center;
       background-size: contain;
     }
   }
@@ -92,10 +87,27 @@
   }
 
   &__select {
-    background: transparent;
-    border: none;
-    color: #fff;
-    width: 150px;
+
+
+    .btn {
+      position: relative;
+      background: transparent;
+      border: none;
+      width: 150px;
+      color: #fff;
+      text-align: inherit;
+      padding: 0 0 0 5px;
+
+      &--small {
+        width: 125px;
+      }
+
+      &::after {
+        position: absolute;
+        right: 0;
+        top: 45%;
+      }
+    }
 
     &-wrap {
       display: flex;
@@ -114,11 +126,11 @@
       border-radius: 50%;
 
       &--sport {
-        background-image: url("../../../assets/icons/sport-icon.svg");
+        background-image: url("../../../assets/icons/sport-icon.png");
       }
 
       &--hd {
-        background-image: url("../../../assets/icons/hd-icon.svg");
+        background-image: url("../../../assets/icons/hd-icon.png");
       }
     }
   }

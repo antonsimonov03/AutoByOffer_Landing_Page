@@ -34,38 +34,40 @@
 
       <div class="search__select-wrap">
         <div class="search__select-icon search__select-icon--sport"></div>
-        <select id="type" class="search__select">
-          <option value="sport" class="search__select-option">
+        <div class="dropdown search__select">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sport
-          </option>
-        </select>
+          </button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="search__box search__box--select">
+      <label class="search__label">Make</label>
+
+      <div class="search__select-wrap">
+        <div class="search__select-icon search__select-icon--hd"></div>
+        <div class="dropdown search__select">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Harley-Davidson
+          </button>
+        </div>
       </div>
 
     </div>
 
     <div class="search__box search__box--select">
-      <label for="make" class="search__label">Make</label>
+      <label class="search__label">Year</label>
 
       <div class="search__select-wrap">
-        <div class="search__select-icon search__select-icon--hd"></div>
-        <select id="make" class="search__select">
-          <option value="hd" class="search__select-option">
-            Harley-Davidson
-          </option>
-        </select>
-      </div>
-
-    </div>
-
-    <div class="search__box search__box--select search__box--small">
-      <label for="years" class="search__label">Year</label>
-
-      <div class="search__select-wrap">
-        <select id="years" class="search__select">
-          <option value="hd" class="search__select-option">
+        <div class="dropdown search__select">
+          <button class="btn btn--small dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Last 5 years
-          </option>
-        </select>
+          </button>
+        </div>
       </div>
 
     </div>
