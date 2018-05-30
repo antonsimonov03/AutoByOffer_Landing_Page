@@ -2,29 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { MenuComponent } from './home/menu/menu.component';
-import { SearchComponent } from './home/search/search.component';
+import { HomeComponent } from './main/home/home.component';
+import { MenuComponent } from './menu/menu.component';
+import { SearchComponent } from './main/home/search/search.component';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {NouisliderModule} from 'ng2-nouislider';
-import { UnitsComponent } from './units/units.component';
-import { AllUnitsComponent } from './all-units/all-units.component';
+import { UnitsComponent } from './main/units/units.component';
+import { AllUnitsComponent } from './main/all-units/all-units.component';
 import { FooterComponent } from './footer/footer.component';
+import {AppRoutingModule} from './app-routing.module';
+import {MainComponent} from './main/main.component';
+import {ProductComponent} from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    MenuComponent,
-    SearchComponent,
-    UnitsComponent,
-    AllUnitsComponent,
-    FooterComponent
+    FooterComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AngularFontAwesomeModule,
-    NouisliderModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

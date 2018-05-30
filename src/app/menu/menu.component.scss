@@ -6,6 +6,11 @@
   height: 40px;
   font-size: .9rem;
   align-items: baseline;
+  background-color: transparent;
+  margin-top: 55px;
+  flex-flow: row nowrap;
+  color: #fff;
+  justify-content: space-between;
 
   &__list {
     list-style-type: none;
@@ -13,6 +18,14 @@
     flex-direction: row;
     text-transform: uppercase;
     padding: 0;
+  }
+
+  &__logo {
+    width: 202px;
+    height: 22px;
+    background: url("../../assets/img/logo.png") no-repeat center;
+    background-size: contain;
+    cursor: pointer;
   }
 
   &__item {
