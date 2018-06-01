@@ -1,0 +1,17 @@
+.header-bg {
+  height: 135px;
+  background-color: #0065ed;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+
+  &__text {
+    font-family: Gilroy, Serif, sans-serif;
+    font-weight: bold;
+
+  }
+}

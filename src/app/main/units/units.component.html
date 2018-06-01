@@ -4,9 +4,9 @@
 
   <div class="units__list">
 
-    <div class="row">
+    <div class="row" *ngFor="let item of ' '.repeat(2).split('')">
 
-      <div class="units__item">
+      <div class="units__item" *ngFor="let item of ' '.repeat(3).split('')">
         <div class="units__item-img"></div>
         <p class="units__item-header">2015 Kawasaki Concours 14 <br> ABS Touring</p>
         <p class="units__item-description">
@@ -18,89 +18,11 @@
           Average: {{15499 | currency}}
         </p>
         <button class="units__btn">Make an offer <fa class="units__btn-icon" name="angle-double-right"></fa></button>
-        <button class="units__btn">View product <fa class="units__btn-icon" name="angle-double-right"></fa></button>
-      </div>
-
-      <div class="units__item">
-        <div class="units__item-img"></div>
-        <p class="units__item-header">2015 Kawasaki Concours 14 <br> ABS Touring</p>
-        <p class="units__item-description">
-          Make: Kawasaki <br>
-          Model: Concours 14 ABS Touring <br>
-          Year: 2015 <br>
-          Color: Green <br>
-          Odometer: 12000 KM <br>
-          Average: {{15499 | currency}}
-        </p>
-        <button class="units__btn">Make an offer <fa class="units__btn-icon" name="angle-double-right"></fa></button>
-        <button class="units__btn">View product <fa class="units__btn-icon" name="angle-double-right"></fa></button>
-      </div>
-
-      <div class="units__item">
-        <div class="units__item-img"></div>
-        <p class="units__item-header">2015 Kawasaki Concours 14 <br> ABS Touring</p>
-        <p class="units__item-description">
-          Make: Kawasaki <br>
-          Model: Concours 14 ABS Touring <br>
-          Year: 2015 <br>
-          Color: Green <br>
-          Odometer: 12000 KM <br>
-          Average: {{15499 | currency}}
-        </p>
-        <button class="units__btn">Make an offer <fa class="units__btn-icon" name="angle-double-right"></fa></button>
-        <button class="units__btn">View product <fa class="units__btn-icon" name="angle-double-right"></fa></button>
+        <button class="units__btn" (click)="navToProduct()">View product <fa class="units__btn-icon" name="angle-double-right"></fa></button>
       </div>
 
     </div>
 
-    <div class="row">
-
-      <div class="units__item">
-        <div class="units__item-img"></div>
-        <p class="units__item-header">2015 Kawasaki Concours 14 <br> ABS Touring</p>
-        <p class="units__item-description">
-          Make: Kawasaki <br>
-          Model: Concours 14 ABS Touring <br>
-          Year: 2015 <br>
-          Color: Green <br>
-          Odometer: 12000 KM <br>
-          Average: {{15499 | currency}}
-        </p>
-        <button class="units__btn">Make an offer <fa class="units__btn-icon" name="angle-double-right"></fa></button>
-        <button class="units__btn">View product <fa class="units__btn-icon" name="angle-double-right"></fa></button>
-      </div>
-
-      <div class="units__item">
-        <div class="units__item-img"></div>
-        <p class="units__item-header">2015 Kawasaki Concours 14 <br> ABS Touring</p>
-        <p class="units__item-description">
-          Make: Kawasaki <br>
-          Model: Concours 14 ABS Touring <br>
-          Year: 2015 <br>
-          Color: Green <br>
-          Odometer: 12000 KM <br>
-          Average: {{15499 | currency}}
-        </p>
-        <button class="units__btn">Make an offer <fa class="units__btn-icon" name="angle-double-right"></fa></button>
-        <button class="units__btn">View product <fa class="units__btn-icon" name="angle-double-right"></fa></button>
-      </div>
-
-      <div class="units__item">
-        <div class="units__item-img"></div>
-        <p class="units__item-header">2015 Kawasaki Concours 14 <br> ABS Touring</p>
-        <p class="units__item-description">
-          Make: Kawasaki <br>
-          Model: Concours 14 ABS Touring <br>
-          Year: 2015 <br>
-          Color: Green <br>
-          Odometer: 12000 KM <br>
-          Average: {{15499 | currency}}
-        </p>
-        <button class="units__btn">Make an offer <fa class="units__btn-icon" name="angle-double-right"></fa></button>
-        <button class="units__btn">View product <fa class="units__btn-icon" name="angle-double-right"></fa></button>
-      </div>
-
-    </div>
 
   </div>
 

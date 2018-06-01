@@ -1,0 +1,263 @@
+.header-bg {
+  height: 135px;
+  background-color: #0065ed;
+}
+
+.main {
+  overflow: hidden;
+  z-index: 1;
+
+  &__slider {
+    margin-top: 90px;
+  }
+
+  &__content {
+    margin-top: 90px;
+    margin-bottom: 60px;
+    font-family: Gilroy, Serif, sans-serif;
+
+    &-header {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: rgb(97, 99, 101);
+    }
+
+    &-info,
+    &-prop {
+      font-size: 1.5rem;
+    }
+
+    &-prop {
+      width: 200px;
+    }
+  }
+
+  &__offer {
+    position: absolute;
+    right: 300px;
+    top: 730px;
+    z-index: 3;
+  }
+
+
+}
+
+.slider {
+  height: 600px;
+  position: relative;
+
+  &__item {
+    object-fit: contain;
+  }
+
+  &__arrow {
+    position: absolute;
+    color: #fff;
+    text-shadow: 1px 1.732px 10px rgba(0,0,0,0.75);;
+    font-size: 92px;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 200px;
+    cursor: pointer;
+
+    &--right {
+      right: 0;
+    }
+  }
+}
+
+.offer {
+  font-family: Gilroy, Serif, sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+
+   &__modal {
+     width: 442px;
+     box-shadow: 0 8.66px 16px rgba(97,99,101,0.5);
+     border-radius: 6px;
+     background-color: #fff;
+     padding: 0 30px;
+     color: rgb(97, 99, 101);
+     display: flex;
+     flex-flow: column nowrap;
+
+     &-header {
+       display: flex;
+       justify-content: space-between;
+       align-items: baseline;
+     }
+
+     &-sign {
+       font-size: 1.5rem;
+       align-self: flex-start;
+     }
+
+     &-price {
+       font-weight: bold;
+       font-size: 3rem;
+     }
+   }
+
+  &__box {
+    display: flex;
+    flex-flow: column nowrap;
+    border-bottom: 1px solid rgb(97, 99, 101);
+
+    &--value {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 0;
+    font-size: .7rem;
+  }
+
+  &__input {
+    border: none;
+    background: transparent;
+    color: rgb(97,99,101);
+    padding: 0 5px;
+  }
+
+  &__textarea {
+    resize: none;
+    border: none;
+    background: transparent;
+    color: rgb(97,99,101);
+    padding: 0 5px;
+  }
+
+  &__btn {
+    align-self: flex-end;
+    border: none;
+    border-radius: 18px;
+    background-color: #0065ed;
+    color: #fff;
+    width: 156px;
+    height: 36px;
+    margin: 35px 0 40px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__media {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-top: 30px;
+    align-self: flex-end;
+
+    &-text {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+
+    &-icon {
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      margin-right: 5px;
+      display: flex;
+      color: #fff;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.25rem;
+      cursor: pointer;
+
+      &--fb {
+        background-color: #3B5998;
+      }
+
+      &--tw {
+        background-color: #55ACEE;
+      }
+
+      &--gp {
+        background-color: #DC4E41;
+      }
+
+      &--mail {
+        background-color: #797d83;
+      }
+    }
+  }
+}
+
+// Modal styles
+
+.modal-content {
+  border-radius: 10px;
+}
+
+.close {
+  width: 58px;
+  height: 58px;
+  margin: 0;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.35);
+  top: 0;
+  opacity: 1;
+  right: 0;
+  color: #0065ed;
+  transform: translate(50%, -50%);
+  background-color: #fff;
+}
+
+.modal-title {
+  font-family: Gilroy, Serif, sans-serif;
+  font-size: 2.7rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  align-self: center;
+  text-align: center;
+}
+
+.modal-text {
+  font-family: Gilroy, Serif, sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.modal-body {
+  position: relative;
+  padding: 20px 40px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.modal-box {
+  margin-top: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  border-bottom: 1px solid rgb(97,99,101);
+}
+
+.modal-label {
+  margin-bottom: 0;
+  font-size: 0.7rem;
+  color: rgba(97,99,101, 0.5);
+}
+
+.modal-input {
+  border: none;
+  background-color: transparent;
+  padding: 0 5px;
+  font-family: Gilroy, Serif, sans-serif;
+  color: rgb(97,99,101);
+}
+
+.modal-btn {
+  font-family: Gilroy, Serif, sans-serif;
+  margin: 58px 0 25px;
+  align-self: center;
+  color: #fff;
+  border: none;
+  border-radius: 18px;
+  width: 156px;
+  height: 38px;
+  background-color: #0065ed;
+}

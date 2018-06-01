@@ -1,10 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {ErrorPageComponent} from './error-page/error-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/main', pathMatch: 'full' },
-  { path: 'main', loadChildren: './main/main.module#MainModule'},
-  { path: 'product', loadChildren: './product/product.module#ProductModule'}
+  { path: '', loadChildren: './main/main.module#MainModule', pathMatch: 'full' },
+  { path: 'product', loadChildren: './product/product.module#ProductModule'},
+  { path: '**', component: ErrorPageComponent }
 ];
 
 @NgModule({

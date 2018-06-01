@@ -1,3 +1,137 @@
-<div>
-  <!--<app-menu></app-menu>-->
+<div class="header-bg"></div>
+
+<div class="main">
+
+  <div class="main__slider slider">
+    <div class="slider__arrow" (click)="swiper.directiveRef.prevSlide()"><fa name="angle-left"></fa></div>
+
+    <swiper class="slider__wrap" [config]="config" [(index)]="index">
+      <img class="slider__item" src="../../assets/img/bike-1.png">
+      <img class="slider__item" src="../../assets/img/bike-2.png">
+      <img class="slider__item" src="../../assets/img/bike-3.png">
+      <img class="slider__item" src="../../assets/img/bike-1.png">
+      <img class="slider__item" src="../../assets/img/bike-2.png">
+    </swiper>
+
+    <div class="slider__arrow slider__arrow--right" (click)="swiper.directiveRef.nextSlide()"><fa name="angle-right"></fa></div>
+
+  </div>
+
+
+
+  <div class="main__content container">
+    <p class="main__content-header">2016 KTM 1190 Adventure R</p>
+    <table class="main__content-table">
+      <tr class="main__content-row">
+        <td class="main__content-prop">Year:</td>
+        <td class="main__content-info">2016</td>
+      </tr>
+      <tr class="main__content-row">
+        <td class="main__content-prop">Make:</td>
+        <td class="main__content-info">KTM</td>
+      </tr>
+      <tr class="main__content-row">
+        <td class="main__content-prop">Model:</td>
+        <td class="main__content-info">1190 Adventure R</td>
+      </tr>
+      <tr class="main__content-row">
+        <td class="main__content-prop">Condition:</td>
+        <td class="main__content-info">New</td>
+      </tr>
+      <tr class="main__content-row">
+        <td class="main__content-prop">Category:</td>
+        <td class="main__content-info">Motorcycle</td>
+      </tr>
+      <tr class="main__content-row">
+        <td class="main__content-prop">Type:</td>
+        <td class="main__content-info">Touring</td>
+      </tr>
+      <tr class="main__content-row">
+        <td class="main__content-prop">Mileage:</td>
+        <td class="main__content-info">125 km</td>
+      </tr>
+      <tr class="main__content-row">
+        <td class="main__content-prop">Family:</td>
+        <td class="main__content-info">Adventure</td>
+      </tr>
+      <tr class="main__content-row">
+        <td class="main__content-prop">Engine:</td>
+        <td class="main__content-info">Liquid-cooled, 75-degree DOHC V-twin</td>
+      </tr>
+      <tr class="main__content-row">
+        <td class="main__content-prop">Color:</td>
+        <td class="main__content-info">Black</td>
+      </tr>
+      <tr class="main__content-row">
+        <td class="main__content-prop">Vehicle Report:</td>
+        <td class="main__content-info"><a routerLink="/product">View Vehicle Report</a></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="main__offer offer">
+
+    <div class="offer__modal">
+      <p class="offer__modal-header">Advertised at: <span class="offer__modal-price"><span class="offer__modal-sign">$</span>17,999</span></p>
+
+      <div class="offer__box offer__box--value">
+        <label for="value" class="offer__label">Your Offer</label>
+        <input id="value" type="text" class="offer__input" [value]="17000 | currency">
+      </div>
+
+      <div class="offer__box">
+        <label for="comment" class="offer__label">Comment</label>
+        <textarea id="comment" rows="6" class="offer__textarea">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dolorem, esse expedita hic, illum libero natus, nemo pariatur quae quas quod quos? Accusamus aut eligendi provident quas recusandae totam voluptatum?</textarea>
+      </div>
+
+      <button class="offer__btn" (click)="openModal(offer)">Make an offer</button>
+    </div>
+
+
+    <div class="offer__media">
+      <p class="offer__media-text">Share:</p>
+      <div class="offer__media-icon offer__media-icon--fb">
+        <fa name="facebook-f"></fa>
+      </div>
+      <div class="offer__media-icon offer__media-icon--tw">
+        <fa name="twitter"></fa>
+      </div>
+      <div class="offer__media-icon offer__media-icon--gp">
+        <fa name="google-plus"></fa>
+      </div>
+      <div class="offer__media-icon offer__media-icon--mail" (click)="openModal(emailModal)">
+        <fa name="envelope"></fa>
+      </div>
+    </div>
+
+  </div>
+
+  <ng-template #offer let-c="close" let-d="dismiss">
+    <div class="modal-body">
+      <h4 class="modal-title">Offer received</h4>
+
+      <button type="button" class="close" aria-label="Close" (click)="d()">
+        <fa name="times"></fa>
+      </button>
+
+      <p class="modal-text">Thank you for making an offer. <br>
+        Your offer has been received, we'll notify the owner/dealer affiliate and we'll keep you informed. <br>
+        You can always review your offers in your <a routerLink="/product">profile page</a></p>
+    </div>
+  </ng-template>
+
+  <ng-template #emailModal let-c="close" let-d="dismiss">
+    <div class="modal-body">
+      <h4 class="modal-title">Share with <br> your friends</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <fa name="times"></fa>
+      </button>
+      <div class="modal-box">
+        <label for="emails" class="modal-label">Emails</label>
+        <input id="emails" type="text" class="modal-input" value="john@gmail.com, brian@gmail.com">
+      </div>
+      <button class="modal-btn">Send <fa name="envelope" [inverse]="true"></fa></button>
+    </div>
+  </ng-template>
+
 </div>
