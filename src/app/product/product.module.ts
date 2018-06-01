@@ -5,6 +5,8 @@ import {ProductRoutingModule} from './product-routing.module';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {SwiperModule} from 'ngx-swiper-wrapper';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {ProductResolver} from '../shared/services/product-resolver.service';
+import {ProductService} from '../shared/services/product.service';
 
 @NgModule({
   imports: [
@@ -16,6 +18,10 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   ],
   declarations: [
     ProductComponent
+  ],
+  providers: [
+    ProductService,
+    ProductResolver
   ]
 
 })

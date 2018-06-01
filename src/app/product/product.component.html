@@ -6,11 +6,7 @@
     <div class="slider__arrow" (click)="swiper.directiveRef.prevSlide()"><fa name="angle-left"></fa></div>
 
     <swiper class="slider__wrap" [config]="config" [(index)]="index">
-      <img class="slider__item" src="../../assets/img/bike-1.png">
-      <img class="slider__item" src="../../assets/img/bike-2.png">
-      <img class="slider__item" src="../../assets/img/bike-3.png">
-      <img class="slider__item" src="../../assets/img/bike-1.png">
-      <img class="slider__item" src="../../assets/img/bike-2.png">
+      <img class="slider__item" *ngFor="let image of product.images" src="{{ image }}">
     </swiper>
 
     <div class="slider__arrow slider__arrow--right" (click)="swiper.directiveRef.nextSlide()"><fa name="angle-right"></fa></div>
@@ -20,47 +16,47 @@
 
 
   <div class="main__content container">
-    <p class="main__content-header">2016 KTM 1190 Adventure R</p>
+    <p class="main__content-header">{{ product.year }} {{ product.make }} {{ product.model }}</p>
     <table class="main__content-table">
       <tr class="main__content-row">
         <td class="main__content-prop">Year:</td>
-        <td class="main__content-info">2016</td>
+        <td class="main__content-info">{{ product.year }}</td>
       </tr>
       <tr class="main__content-row">
         <td class="main__content-prop">Make:</td>
-        <td class="main__content-info">KTM</td>
+        <td class="main__content-info">{{ product.make }}</td>
       </tr>
       <tr class="main__content-row">
         <td class="main__content-prop">Model:</td>
-        <td class="main__content-info">1190 Adventure R</td>
+        <td class="main__content-info">{{ product.model }}</td>
       </tr>
       <tr class="main__content-row">
         <td class="main__content-prop">Condition:</td>
-        <td class="main__content-info">New</td>
+        <td class="main__content-info">{{ product.condition }}</td>
       </tr>
       <tr class="main__content-row">
         <td class="main__content-prop">Category:</td>
-        <td class="main__content-info">Motorcycle</td>
+        <td class="main__content-info">{{ product.category }}</td>
       </tr>
       <tr class="main__content-row">
         <td class="main__content-prop">Type:</td>
-        <td class="main__content-info">Touring</td>
+        <td class="main__content-info">{{ product.type }}</td>
       </tr>
       <tr class="main__content-row">
         <td class="main__content-prop">Mileage:</td>
-        <td class="main__content-info">125 km</td>
+        <td class="main__content-info">{{ product.mileage }} km</td>
       </tr>
       <tr class="main__content-row">
         <td class="main__content-prop">Family:</td>
-        <td class="main__content-info">Adventure</td>
+        <td class="main__content-info">{{ product.family }}</td>
       </tr>
       <tr class="main__content-row">
         <td class="main__content-prop">Engine:</td>
-        <td class="main__content-info">Liquid-cooled, 75-degree DOHC V-twin</td>
+        <td class="main__content-info">{{ product.engine }}</td>
       </tr>
       <tr class="main__content-row">
         <td class="main__content-prop">Color:</td>
-        <td class="main__content-info">Black</td>
+        <td class="main__content-info">{{ product.color }}</td>
       </tr>
       <tr class="main__content-row">
         <td class="main__content-prop">Vehicle Report:</td>
@@ -72,7 +68,7 @@
   <div class="main__offer offer">
 
     <div class="offer__modal">
-      <p class="offer__modal-header">Advertised at: <span class="offer__modal-price"><span class="offer__modal-sign">$</span>17,999</span></p>
+      <p class="offer__modal-header">Advertised at: <span class="offer__modal-price">{{product.price | currency}}</span></p>
 
       <div class="offer__box offer__box--value">
         <label for="value" class="offer__label">Your Offer</label>

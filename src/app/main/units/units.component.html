@@ -4,21 +4,21 @@
 
   <div class="units__list">
 
-    <div class="row" *ngFor="let item of ' '.repeat(2).split('')">
+    <div class="units__row">
 
-      <div class="units__item" *ngFor="let item of ' '.repeat(3).split('')">
-        <div class="units__item-img"></div>
-        <p class="units__item-header">2015 Kawasaki Concours 14 <br> ABS Touring</p>
-        <p class="units__item-description">
-          Make: Kawasaki <br>
-          Model: Concours 14 ABS Touring <br>
-          Year: 2015 <br>
-          Color: Green <br>
-          Odometer: 12000 KM <br>
-          Average: {{15499 | currency}}
-        </p>
+      <div class="units__item" *ngFor="let product of products">
+        <img src="{{ product.titleImage }}" class="units__item-img">
+        <p class="units__item-header">{{product.year}} {{product.make}} {{product.model}}</p>
+        <div class="units__item-description">
+          <span>Make: {{ product.make }}</span>
+          <span>Model: {{ product.model }}</span>
+          <span>Year: {{ product.year }}</span>
+          <span>Color: {{ product.color }}</span>
+          <span>Odometer: {{ product.odometer }} KM</span>
+          <span>Average: {{ product.price | currency }}</span>
+        </div>
         <button class="units__btn">Make an offer <fa class="units__btn-icon" name="angle-double-right"></fa></button>
-        <button class="units__btn" (click)="navToProduct()">View product <fa class="units__btn-icon" name="angle-double-right"></fa></button>
+        <button class="units__btn" (click)="navToProduct(product.id)">View product <fa class="units__btn-icon" name="angle-double-right"></fa></button>
       </div>
 
     </div>

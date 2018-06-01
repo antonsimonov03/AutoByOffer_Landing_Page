@@ -11,6 +11,13 @@
     text-align: center;
   }
 
+  &__row {
+    display: flex;
+    align-self: center;
+    flex-flow: row wrap;
+    width: 1272px;
+  }
+
   &__list {
     margin-top: 96px;
     margin-bottom: 108px;
@@ -23,16 +30,19 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    width: 400px;
     margin: 0 12px 46px;
 
     &-img {
       width: 400px;
       height: 234px;
-      background: url("../../../assets/img/unit.png") no-repeat center;
-      background-size: contain;
+      object-fit: cover;
     }
 
     &-header {
+      display: block;
+      width: 280px;
+      align-self: center;
       margin: 16px 0 22px;
       font-weight: bold;
       text-align: center;
@@ -41,8 +51,17 @@
     }
 
     &-description {
-      text-align: center;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
       margin-bottom: 32px;
+
+      span {
+        overflow: hidden;
+        max-width: 400px;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+       }
     }
   }
 

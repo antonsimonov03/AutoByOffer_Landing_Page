@@ -8,6 +8,8 @@ import {MainRoutingModule} from './main-routing.module';
 import {MainComponent} from './main.component';
 import {SearchComponent} from './home/search/search.component';
 import {HomeComponent} from './home/home.component';
+import {HttpClientModule} from '@angular/common/http';
+import {ProductService} from '../shared/services/product.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,11 @@ import {HomeComponent} from './home/home.component';
     CommonModule,
     AngularFontAwesomeModule,
     NouisliderModule,
-    MainRoutingModule
+    MainRoutingModule,
+    HttpClientModule
+  ],
+  providers: [
+    ProductService
   ]
 })
 

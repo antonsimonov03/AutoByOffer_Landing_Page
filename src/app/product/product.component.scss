@@ -88,14 +88,13 @@
        align-items: baseline;
      }
 
-     &-sign {
-       font-size: 1.5rem;
-       align-self: flex-start;
-     }
-
      &-price {
        font-weight: bold;
        font-size: 3rem;
+
+       &:first-letter {
+         font-size: 1.5rem;
+       }
      }
    }
 
@@ -260,4 +259,5 @@
   width: 156px;
   height: 38px;
   background-color: #0065ed;
+  cursor: pointer;
 }
