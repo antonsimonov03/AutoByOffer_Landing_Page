@@ -60,7 +60,7 @@
       </tr>
       <tr class="main__content-row">
         <td class="main__content-prop">Vehicle Report:</td>
-        <td class="main__content-info"><a routerLink="/product">View Vehicle Report</a></td>
+        <td class="main__content-info"><a routerLink="/">View Vehicle Report</a></td>
       </tr>
     </table>
   </div>
@@ -112,7 +112,7 @@
 
       <p class="modal-text">Thank you for making an offer. <br>
         Your offer has been received, we'll notify the owner/dealer affiliate and we'll keep you informed. <br>
-        You can always review your offers in your <a routerLink="/product">profile page</a></p>
+        You can always review your offers in your <a (click)="c()" routerLink="/">profile page</a></p>
     </div>
   </ng-template>
 
@@ -125,8 +125,8 @@
       <div class="modal-box">
         <label for="emails" class="modal-label">Emails</label>
         <input id="emails" type="text" class="modal-input" value="john@gmail.com, brian@gmail.com">
-      </div>
-      <button class="modal-btn">Send <fa name="envelope" [inverse]="true"></fa></button>
+      </div>s
+      <button class="modal-btn">Send <fa name="envelope"></fa></button>
     </div>
   </ng-template>
 
