@@ -13,7 +13,7 @@ import { takeWhile } from 'rxjs/operators';
 })
 export class ProductComponent implements OnInit, OnDestroy {
 
-  @Input() product: Product;
+  product: Product;
   config: SwiperConfigInterface;
   index: number;
 

@@ -39,6 +39,7 @@
     align-items: center;
     margin: 0 20px;
     height: 30px;
+    text-align: center;
     cursor: pointer;
 
     &--active {
@@ -46,16 +47,26 @@
     }
   }
 
+  &__link {
+    color: #fff;
+    text-decoration: none;
+  }
+
   &__btn {
     background: transparent;
     padding: 0;
     border: none;
     height: inherit;
-    color: #fff;
     letter-spacing: 2px;
     text-transform: uppercase;
     width: 101px;
+    color: #fff;
     cursor: pointer;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
 
     &--rounded {
       border: 1px solid #fff;

@@ -7,13 +7,14 @@
 
 
   <ul class="menu__list">
-    <li class="menu__item menu__item--active">Home</li>
-    <li class="menu__item">Vehicles</li>
-    <li class="menu__item">About us</li>
+    <li class="menu__item" routerLinkActive="menu__item--active" [routerLinkActiveOptions]="{ exact: true }"><a class="menu__link" routerLink="/">Home</a></li>
+    <li class="menu__item"><a class="menu__link">Vehicles</a></li>
+    <li class="menu__item"><a class="menu__link">About us</a></li>
   </ul>
 
-  <button (click)="navToLogin()" class="menu__btn">Login</button>
-  <button (click)="navToSignup()" class="menu__btn menu__btn--rounded">Sign up</button>
+  <button *ngIf="!isAuthenticated" class="menu__btn"><a routerLink="/login">Login</a></button>
+  <button *ngIf="isAuthenticated" (click)="logout()" class="menu__btn">Logout</button>
+  <button [hidden]="isAuthenticated" class="menu__btn menu__btn--rounded"><a routerLink="/signup">Sign up</a></button>
   <p class="menu__phone">250.792.1201</p>
 
   <div class="menu__social">

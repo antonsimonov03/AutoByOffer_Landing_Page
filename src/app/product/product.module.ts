@@ -4,7 +4,7 @@ import { ProductRoutingModule } from './product-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SwiperModule } from 'ngx-swiper-wrapper';
-import { ProductResolver } from '../shared/services/product-resolver.service';
+import { ProductResolver } from './product-resolver.service';
 
 @NgModule({
   imports: [

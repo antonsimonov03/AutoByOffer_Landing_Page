@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { TokenInterceptor } from './core/services/token.interceptor';
+import { UnauthInterceptor } from './core/services/unauth.interceptor';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TokenInterceptor } from './core/services/token.interceptor';
     AppRoutingModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: UnauthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

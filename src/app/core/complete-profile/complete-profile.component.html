@@ -1,0 +1,42 @@
+<div class="header-bg"></div>
+
+<h1 class="header">Complete your profile</h1>
+<form [formGroup]="form" (ngSubmit)="submit()" class="form">
+
+  <div class="form__wrap">
+
+    <div class="form__box">
+      <label for="building" class="form__label">Building</label>
+      <input id="building" formControlName="building" type="text" class="form__control">
+    </div>
+
+    <div class="form__box">
+      <label for="street" class="form__label">Street</label>
+      <input id="street" formControlName="street" type="text" class="form__control">
+    </div>
+
+    <div class="form__box">
+      <label for="city" class="form__label">City</label>
+      <input id="city" formControlName="city" type="text" class="form__control">
+    </div>
+
+    <div class="form__box">
+      <label for="state" class="form__label">Province/State</label>
+      <input id="state" formControlName="state" type="text" class="form__control">
+    </div>
+
+    <div class="form__box">
+      <label for="postalCode" class="form__label">Postal/ZIP Code</label>
+      <input id="postalCode" formControlName="postalCode" type="text" class="form__control">
+    </div>
+
+    <div class="form__box">
+      <label for="country" class="form__label">Country</label>
+      <input id="country" formControlName="country" type="text" class="form__control">
+    </div>
+
+  </div>
+
+  <button type="submit" class="form__btn">Continue</button>
+</form>
+

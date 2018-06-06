@@ -11,9 +11,13 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
+import { CommonModule } from '@angular/common';
+import { AuthGuard } from './services/auth.guard';
+import { CompleteProfileComponent } from './complete-profile/complete-profile.component';
 
 @NgModule({
   imports: [
+    CommonModule,
     HttpClientModule,
     RouterModule,
     AngularFontAwesomeModule,
@@ -26,10 +30,12 @@ import { TextMaskModule } from 'angular2-text-mask';
     FooterComponent,
     MenuComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    CompleteProfileComponent
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   exports: [
     HttpClientModule,
