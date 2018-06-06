@@ -1,27 +1,23 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ProductComponent } from './product.component';
-import {ProductRoutingModule} from './product-routing.module';
-import {AngularFontAwesomeModule} from 'angular-font-awesome';
-import {SwiperModule} from 'ngx-swiper-wrapper';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {ProductResolver} from '../shared/services/product-resolver.service';
-import {ProductService} from '../shared/services/product.service';
+import { ProductRoutingModule } from './product-routing.module';
+import { SharedModule } from '../shared/shared.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { ProductResolver } from '../shared/services/product-resolver.service';
 
 @NgModule({
   imports: [
-    CommonModule,
-    AngularFontAwesomeModule,
+    SharedModule,
     ProductRoutingModule,
     SwiperModule,
     NgbModule
   ],
+  providers: [
+    ProductResolver
+  ],
   declarations: [
     ProductComponent
-  ],
-  providers: [
-    ProductService,
-    ProductResolver
   ]
 
 })

@@ -1,0 +1,62 @@
+<div class="header-bg"></div>
+
+<h1 class="header">Sign up</h1>
+<form [formGroup]="form" (ngSubmit)="submit()" class="form">
+
+  <div class="form__wrap">
+
+    <div class="form__group">
+      <fa class="form__icon" name="user"></fa>
+      <div class="form__box">
+        <label for="firstName" class="form__label">First name</label>
+        <input id="firstName" formControlName="firstName" type="text" class="form__control">
+      </div>
+    </div>
+
+    <div class="form__group">
+      <fa class="form__icon" name="users"></fa>
+      <div class="form__box">
+        <label for="lastName" class="form__label">Last name</label>
+        <input id="lastName" formControlName="lastName" type="text" class="form__control">
+      </div>
+    </div>
+
+    <div class="form__group">
+      <fa class="form__icon" name="envelope"></fa>
+      <div class="form__box">
+        <label for="email" class="form__label">Email</label>
+        <input id="email" formControlName="email" type="email" class="form__control">
+      </div>
+    </div>
+
+    <div class="form__group">
+      <fa class="form__icon" name="phone"></fa>
+      <div class="form__box">
+        <label for="phone" class="form__label">Cell Phone Number</label>
+        <input id="phone" formControlName="phone" type="text" [textMask]="{mask: phoneMask}" class="form__control">
+      </div>
+    </div>
+
+    <div class="form__group">
+      <fa class="form__icon" name="lock"></fa>
+      <div class="form__box">
+        <label for="password" class="form__label">Password</label>
+        <input id="password" formControlName="password" type="password" class="form__control">
+      </div>
+    </div>
+
+    <div class="form__group">
+      <fa class="form__icon" name="lock"></fa>
+      <div class="form__box">
+        <label for="confirmPassword" class="form__label">Confirm password</label>
+        <input id="confirmPassword" formControlName="confirmPassword" type="password" class="form__control">
+      </div>
+    </div>
+
+  </div>
+
+  <p class="form__disclaimer">By clicking on Sign up, you agree to Autobyoffer's <a routerLink="/signup">terms & conditions</a>, <a routerLink="/signup">privacy policy</a> and <a routerLink="/signup">e-sign agreement</a></p>
+
+  <button type="submit" class="form__btn" [disabled]="form.invalid || (password !== confirmPassword)">Sign up</button>
+</form>
+

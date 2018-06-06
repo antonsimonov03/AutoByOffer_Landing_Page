@@ -1,10 +1,10 @@
-import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {SwiperComponent, SwiperConfigInterface} from 'ngx-swiper-wrapper';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {Product} from '../shared/models/product.model';
-import {ActivatedRoute} from '@angular/router';
+import { Component, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { SwiperComponent, SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Product } from '../shared/models/product.model';
+import { ActivatedRoute } from '@angular/router';
 
-import {takeWhile} from 'rxjs/operators';
+import { takeWhile } from 'rxjs/operators';
 
 @Component({
   selector: 'app-product',
@@ -13,7 +13,7 @@ import {takeWhile} from 'rxjs/operators';
 })
 export class ProductComponent implements OnInit, OnDestroy {
 
-  product: Product;
+  @Input() product: Product;
   config: SwiperConfigInterface;
   index: number;
 
@@ -45,9 +45,7 @@ export class ProductComponent implements OnInit, OnDestroy {
       });
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   openModal(content): void {
     this.modalService.open(content, { centered: true });

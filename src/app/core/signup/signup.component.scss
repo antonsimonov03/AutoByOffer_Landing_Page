@@ -1,0 +1,83 @@
+.header-bg {
+  height: 135px;
+  background-color: #0065ed;
+}
+
+.header {
+  font-family: Gilroy, Serif, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgb(97,99,101);
+  margin: 80px 0 55px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  font-family: Gilroy, Serif, sans-serif;
+  color: rgb(97,99,101);
+
+  &__wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 500px;
+  }
+
+  &__group {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 240px;
+    justify-content: space-around;
+    margin: 27px 0 0;
+  }
+
+  &__box {
+    display: flex;
+    flex-flow: column nowrap;
+    border-bottom: 1px solid rgb(97,99,101);
+  }
+
+  &__icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    align-self: flex-end;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    margin-bottom: 0;
+    font-size: .7rem;
+  }
+
+  &__control {
+    border: none;
+    background: transparent;
+    color: rgb(97,99,101);
+    padding: 0 3px;
+  }
+
+  &__disclaimer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  &__btn {
+    width: 155px;
+    height: 37px;
+    background-color: #0065ed;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    border-radius: 18px;
+    margin: 30px 0 90px;
+  }
+}
+
+

@@ -1,11 +1,17 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {ErrorPageComponent} from './error-page/error-page.component';
+import {ErrorPageComponent} from './core/error-page/error-page.component';
+import { MainModule } from './main/main.module';
+import { ProductModule } from './product/product.module';
+import { LoginComponent } from './core/login/login.component';
+import { SignupComponent } from './core/signup/signup.component';
 
 const routes: Routes = [
-  { path: '', loadChildren: './main/main.module#MainModule', pathMatch: 'full' },
-  { path: 'product', loadChildren: './product/product.module#ProductModule'},
-  { path: '**', component: ErrorPageComponent }
+  { path: '', loadChildren: () => MainModule, pathMatch: 'full' },
+  { path: 'product', loadChildren: () => ProductModule },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({
