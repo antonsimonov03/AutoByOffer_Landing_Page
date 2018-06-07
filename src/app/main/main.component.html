@@ -1,3 +1,3 @@
 <app-home></app-home>
-<app-units></app-units>
-<app-all-units></app-all-units>
+<app-units [products]="products"></app-units>
+<app-all-units (click)="expandUnits()" *ngIf="!expanded"></app-all-units>

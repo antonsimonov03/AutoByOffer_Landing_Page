@@ -1,6 +1,6 @@
 <div class="header-bg"></div>
 
-<div class="main">
+<div class="main" *ngIf="product">
 
   <div class="main__slider slider">
     <div class="slider__arrow" (click)="swiper.directiveRef.prevSlide()"><fa name="angle-left"></fa></div>
@@ -128,4 +128,8 @@
     </div>
   </ng-template>
 
+</div>
+
+<div class="error" *ngIf="!product">
+  <h1 class="error__message">Product does not exist!</h1>
 </div>

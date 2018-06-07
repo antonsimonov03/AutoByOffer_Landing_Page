@@ -261,3 +261,15 @@
   background-color: #0065ed;
   cursor: pointer;
 }
+
+.error {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__message {
+    font-family: Gilroy, Serif, sans-serif;
+    font-weight: bold;
+  }
+}

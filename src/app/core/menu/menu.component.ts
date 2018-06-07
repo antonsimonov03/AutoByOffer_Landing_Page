@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { takeWhile } from 'rxjs/operators';
@@ -19,12 +19,12 @@ export class MenuComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.auth.auth$
+    this.auth.authChanged$
       .pipe(
         takeWhile( () => this.alive )
       )
-      .subscribe( (data: boolean) => {
-        this.isAuthenticated = data;
+      .subscribe( (isAuthenticated: boolean) => {
+        this.isAuthenticated = isAuthenticated;
       });
   }
 

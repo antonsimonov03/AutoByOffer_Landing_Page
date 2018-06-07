@@ -14,6 +14,7 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { CommonModule } from '@angular/common';
 import { AuthGuard } from './services/auth.guard';
 import { CompleteProfileComponent } from './complete-profile/complete-profile.component';
+import { UserService } from './services/user.service';
 
 @NgModule({
   imports: [
@@ -35,6 +36,7 @@ import { CompleteProfileComponent } from './complete-profile/complete-profile.co
   ],
   providers: [
     AuthService,
+    UserService,
     AuthGuard
   ],
   exports: [

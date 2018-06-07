@@ -1,7 +1,7 @@
 <div class="header-bg"></div>
 
 <h1 class="header">Complete your profile</h1>
-<form [formGroup]="form" (ngSubmit)="submit()" class="form">
+<form [formGroup]="form" (ngSubmit)="completeProfile()" class="form">
 
   <div class="form__wrap">
 
@@ -37,6 +37,7 @@
 
   </div>
 
-  <button type="submit" class="form__btn">Continue</button>
+  <button type="submit" class="form__btn" [disabled]="form.invalid">Continue</button>
+  <button type="button" (click)="navHome()" class="form__btn form__btn--skip">Skip</button>
 </form>
 
