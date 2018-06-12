@@ -1,10 +1,11 @@
-import { Component, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { SwiperComponent, SwiperConfigInterface } from 'ngx-swiper-wrapper';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Product } from '../shared/models/product.model';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { takeWhile } from 'rxjs/operators';
+import { SwiperComponent, SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
+import { Product } from '@shared/models';
 
 @Component({
   selector: 'app-product',

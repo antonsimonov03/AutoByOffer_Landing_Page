@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Product } from '../../models/product.model';
+
+import { Product } from '@shared/models';
 
 @Component({
   selector: 'app-units',

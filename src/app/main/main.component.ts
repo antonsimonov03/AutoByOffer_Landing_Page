@@ -1,8 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ProductService } from '../core/services/product.service';
-import { Product } from '../shared/models/product.model';
+
 import { takeWhile } from 'rxjs/operators';
+
+import { ProductService } from '@core/services';
+
 import { PAGE_SIZE } from '@core/constants';
+
+import { Product } from '@shared/models';
 
 @Component({
   selector: 'app-main',

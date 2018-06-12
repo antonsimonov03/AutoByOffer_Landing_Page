@@ -4,7 +4,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { takeWhile } from 'rxjs/operators';
 import { NouisliderComponent } from 'ng2-nouislider';
 
-import { ProductService } from '@core/services/product.service';
+import { ProductService } from '@core/services';
 import { DEFAULT_DROPDOWN_TEXT } from '@core/constants';
 
 @Component({

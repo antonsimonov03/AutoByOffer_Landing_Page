@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductService } from '@core/services/product.service';
+
+import { ProductService } from '@core/services';
+
 import { PAGE_SIZE } from '@core/constants';
 
 @Component({

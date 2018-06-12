@@ -2,13 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { CoreModule } from './core/core.module';
+import { CoreModule } from '@core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
-import { TokenInterceptor } from './core/interceptors/token.interceptor';
-import { UnauthInterceptor } from './core/interceptors/unauth.interceptor';
+import { TokenInterceptor, UnauthInterceptor } from '@core/interceptors';
 
 @NgModule({
   declarations: [

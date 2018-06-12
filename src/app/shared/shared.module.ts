@@ -6,18 +6,18 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NouisliderModule } from 'ng2-nouislider';
 
-import { SearchComponent } from './components/search/search.component';
-import { UnitsComponent } from './components/units/units.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+
+import { SearchComponent, UnitsComponent } from '@shared/components';
 
 @NgModule({
   imports: [
     CommonModule,
     NouisliderModule,
+    NgSelectModule,
     AngularFontAwesomeModule,
     NgbModule,
-    ReactiveFormsModule,
-    NgSelectModule
+    ReactiveFormsModule
   ],
   declarations: [
     SearchComponent,
@@ -28,10 +28,10 @@ import { NgSelectModule } from '@ng-select/ng-select';
     NouisliderModule,
     AngularFontAwesomeModule,
     SearchComponent,
+    NgSelectModule,
     UnitsComponent,
     NgbModule,
-    ReactiveFormsModule,
-    NgSelectModule
+    ReactiveFormsModule
   ]
 })
 export class SharedModule {}

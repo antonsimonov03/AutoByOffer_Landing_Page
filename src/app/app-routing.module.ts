@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from '@core/components/login/login.component';
-import { SignupComponent } from '@core/components/signup/signup.component';
-import { CompleteProfileComponent } from '@core/components/complete-profile/complete-profile.component';
+
+import { CompleteProfileComponent, LoginComponent, SignupComponent } from '@core/components';
 import { AuthGuard } from '@core/guards/auth.guard';
-import { MainModule } from './main/main.module';
 
 const routes: Routes = [
-  { path: '', loadChildren: () => MainModule, pathMatch: 'full' },
+  { path: '', loadChildren: './main/main.module#MainModule', pathMatch: 'full' },
   { path: 'product', loadChildren: './product/product.module#ProductModule' },
   { path: 'search', loadChildren: './search-products/search-products.module#SearchProductsModule' },
   { path: 'login', component: LoginComponent },

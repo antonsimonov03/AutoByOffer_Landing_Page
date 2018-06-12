@@ -1,10 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { takeWhile } from 'rxjs/operators';
 
-import { Product } from '../shared/models/product.model';
+import { takeWhile } from 'rxjs/operators';
 
 import { ProductService } from '@core/services/product.service';
 import { DEFAULT_PRODUCT_QUERY, PAGE_SIZE } from '@core/constants';
+
+import { Product } from '@shared/models';
 
 @Component({
   selector: 'app-search-products',

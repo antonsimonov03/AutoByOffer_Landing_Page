@@ -8,15 +8,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { TextMaskModule } from 'angular2-text-mask';
 
-import { ErrorPageComponent } from './components/error-page/error-page.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { CompleteProfileComponent } from './components/complete-profile/complete-profile.component';
-
 import { AuthGuard } from '@core/guards/auth.guard';
-import { NgSelectModule } from '@ng-select/ng-select';
+
+import {
+  CompleteProfileComponent,
+  ErrorPageComponent,
+  FooterComponent,
+  LoginComponent,
+  MenuComponent,
+  SignupComponent
+} from '@core/components';
 
 @NgModule({
   imports: [
@@ -46,6 +47,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     AngularFontAwesomeModule,
     TextMaskModule,
     ReactiveFormsModule,
+
     ErrorPageComponent,
     FooterComponent,
     MenuComponent
