@@ -7,8 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
-import { TokenInterceptor } from './core/services/token.interceptor';
-import { UnauthInterceptor } from './core/services/unauth.interceptor';
+import { TokenInterceptor } from './core/interceptors/token.interceptor';
+import { UnauthInterceptor } from './core/interceptors/unauth.interceptor';
 
 @NgModule({
   declarations: [

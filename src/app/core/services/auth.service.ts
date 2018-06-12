@@ -5,7 +5,9 @@ import { User } from '../models/user.model';
 import { environment } from '@env/environment';
 import { Observable, Subject } from 'rxjs';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class AuthService {
 
   user: User = null;

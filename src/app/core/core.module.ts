@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { ErrorPageComponent } from './error-page/error-page.component';
-import { FooterComponent } from './footer/footer.component';
-import { MenuComponent } from './menu/menu.component';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { RouterModule } from '@angular/router';
-import { AuthService } from './services/auth.service';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
-import { CommonModule } from '@angular/common';
-import { AuthGuard } from './services/auth.guard';
-import { CompleteProfileComponent } from './complete-profile/complete-profile.component';
-import { UserService } from './services/user.service';
+
+import { ErrorPageComponent } from './components/error-page/error-page.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { CompleteProfileComponent } from './components/complete-profile/complete-profile.component';
+
+import { AuthGuard } from '@core/guards/auth.guard';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   imports: [
@@ -24,7 +26,7 @@ import { UserService } from './services/user.service';
     AngularFontAwesomeModule,
     ReactiveFormsModule,
     TextMaskModule,
-    NgbModule.forRoot(),
+    NgbModule.forRoot()
   ],
   declarations: [
     ErrorPageComponent,
@@ -35,8 +37,6 @@ import { UserService } from './services/user.service';
     CompleteProfileComponent
   ],
   providers: [
-    AuthService,
-    UserService,
     AuthGuard
   ],
   exports: [

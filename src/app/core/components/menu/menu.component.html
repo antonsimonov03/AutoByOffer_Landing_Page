@@ -1,0 +1,35 @@
+<div class="menu container">
+
+
+  <a routerLink="/">
+    <div class="menu__logo"></div>
+  </a>
+
+
+  <ul class="menu__list">
+    <li class="menu__item" routerLinkActive="menu__item--active" [routerLinkActiveOptions]="{ exact: true }"><a class="menu__link" routerLink="/">Home</a></li>
+    <li class="menu__item" routerLinkActive="menu__item--active"><a class="menu__link" routerLink="/search">Search</a></li>
+    <li class="menu__item"><a class="menu__link">About us</a></li>
+  </ul>
+
+  <button *ngIf="!isAuthenticated" class="menu__btn"><a routerLink="/login">Login</a></button>
+  <button *ngIf="isAuthenticated" (click)="logout()" class="menu__btn">Logout</button>
+  <button [hidden]="isAuthenticated" class="menu__btn menu__btn--rounded"><a routerLink="/signup">Sign up</a></button>
+  <p class="menu__phone">250.792.1201</p>
+
+  <div class="menu__social">
+    <div class="menu__social-icon menu__social-icon--fb">
+      <fa name="facebook-f"></fa>
+    </div>
+    <div class="menu__social-icon menu__social-icon--tw">
+      <fa name="twitter"></fa>
+    </div>
+    <div class="menu__social-icon menu__social-icon--gp">
+      <fa name="google-plus"></fa>
+    </div>
+    <div class="menu__social-icon menu__social-icon--li">
+      <fa name="linkedin"></fa>
+    </div>
+  </div>
+
+</div>

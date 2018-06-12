@@ -1,0 +1,20 @@
+<div class="header-bg"></div>
+
+<app-search [opaque]="true" (searchSubmit)="searchHandler($event)"></app-search>
+
+<app-units [products]="products"></app-units>
+
+<div class="pagination-wrap" *ngIf="productCount > 6">
+  <ngb-pagination
+    class="pagination__item"
+    [pageSize]="pageSize"
+    [collectionSize]="productCount"
+    [maxSize]="3"
+    [rotate]="true"
+    [ellipses]="true"
+    [boundaryLinks]="false"
+    [directionLinks]="false"
+    (pageChange)="pageChanged($event)"
+  >
+  </ngb-pagination>
+</div>

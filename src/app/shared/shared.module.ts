@@ -1,19 +1,37 @@
 import { NgModule } from '@angular/core';
-import { ProductService } from './services/product.service';
+import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { NouisliderModule } from 'ng2-nouislider';
+
+import { SearchComponent } from './components/search/search.component';
+import { UnitsComponent } from './components/units/units.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   imports: [
     CommonModule,
-    AngularFontAwesomeModule
+    NouisliderModule,
+    AngularFontAwesomeModule,
+    NgbModule,
+    ReactiveFormsModule,
+    NgSelectModule
   ],
-  providers: [
-    ProductService
+  declarations: [
+    SearchComponent,
+    UnitsComponent
   ],
   exports: [
     CommonModule,
-    AngularFontAwesomeModule
+    NouisliderModule,
+    AngularFontAwesomeModule,
+    SearchComponent,
+    UnitsComponent,
+    NgbModule,
+    ReactiveFormsModule,
+    NgSelectModule
   ]
 })
 export class SharedModule {}

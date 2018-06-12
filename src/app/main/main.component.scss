@@ -1,0 +1,30 @@
+.header {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-top: 85px;
+  text-align: center;
+  font-family: Gilroy, Serif, sans-serif;
+  color: rgb(97,99,101);
+}
+
+.button {
+  height: 70px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Gilroy, Serif, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #0065ed;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten(#0065ed, 10%);
+  }
+
+  &__icon {
+    margin-left: 10px;
+  }
+}

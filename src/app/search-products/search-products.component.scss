@@ -1,0 +1,19 @@
+.header-bg {
+  height: 135px;
+  background-color: #0065ed;
+}
+
+.pagination {
+
+  &-wrap {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0065ed;
+  }
+
+  &__item {
+    height: 40px;
+  }
+}

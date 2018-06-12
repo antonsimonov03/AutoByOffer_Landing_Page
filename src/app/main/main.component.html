@@ -1,3 +1,7 @@
 <app-home></app-home>
+<p class="header">Features</p>
 <app-units [products]="products"></app-units>
-<app-all-units (click)="expandUnits()" *ngIf="!expanded"></app-all-units>
+<div class="button" (click)="getMoreProducts()" *ngIf="!noMoreProducts">
+  See more units
+  <fa class="button__icon" name="arrow-right"></fa>
+</div>

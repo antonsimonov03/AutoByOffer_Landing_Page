@@ -1,0 +1,30 @@
+<div class="units container">
+
+  <div class="units__list">
+
+    <div class="units__row" *ngIf="products.length">
+
+      <div class="units__item" *ngFor="let product of products" >
+        <img src="{{ product.titleImage }}" class="units__item-img">
+        <p class="units__item-header">{{product.year}} {{product.make}} {{product.model}}</p>
+        <div class="units__item-description">
+          <span>Make: {{ product.make }}</span>
+          <span>Model: {{ product.model }}</span>
+          <span>Year: {{ product.year }}</span>
+          <span>Color: {{ product.color }}</span>
+          <span>Odometer: {{ product.odometer }} KM</span>
+          <span>Average: {{ product.price | currency }}</span>
+        </div>
+        <button class="units__btn">Make an offer <fa class="units__btn-icon" name="angle-double-right"></fa></button>
+        <button class="units__btn" (click)="navToProduct(product._id)">View product <fa class="units__btn-icon" name="angle-double-right"></fa></button>
+      </div>
+
+    </div>
+
+    <div class="units__error" *ngIf="!products.length">
+      <p class="units__message">No matching results.</p>
+    </div>
+
+  </div>
+
+</div>

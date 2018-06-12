@@ -4,6 +4,7 @@
 @import "assets/styles/normalize";
 @import 'assets/styles/bootstrap-override';
 @import '../node_modules/bootstrap/scss/bootstrap';
+@import "~@ng-select/ng-select/themes/default.theme.css";
 
 @font-face {
   font-family: Gilroy;
@@ -29,12 +30,10 @@ nouislider {
   position: relative;
   top: .9rem;
 }
-
 .noUi-horizontal {
   height: 1px;
   border: none;
 }
-
 .noUi-base {
   .noUi-connect {
     background-color: #616365;
@@ -47,12 +46,12 @@ nouislider {
     box-shadow: none;
     display: table;
     height: 12px;
+    width: 12px;
     margin-top: -(15px/2) + 3px/2 - 1;
     padding: 0;
     position: absolute;
     top: 1px;
     right: -10px !important;
-    width: 12px;
     z-index: 2;
 
     &:before,
@@ -83,8 +82,80 @@ nouislider {
     background-size: contain;
     color: #fff;
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
 
   }
+}
+
+// Pagination default style overriding
+ul.pagination {
+  margin-bottom: 0;
+}
+.page {
+
+  &-item {
+    border-radius: 50%;
+    margin: 0 4px;
+
+    &.active .page-link {
+      background-color: #fff;
+      color: #0065ed;
+      border-color: #fff;
+    }
+
+    &.disabled .page-link {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+    }
+
+    &:first-child .page-link,
+    &:last-child  .page-link {
+      border-radius: 50%;
+    }
+  }
+
+  &-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+
+    &:hover {
+      background-color: #fff;
+      border-color: #fff;
+      color: #0065ed;
+    }
+  }
+}
+
+// Select default styles overriding
+.ng-select {
+
+  & .ng-select-container {
+    background-color: transparent;
+    border: none;
+  }
+
+  &.ng-select-single .ng-select-container {
+    color: #fff;
+    background-color: transparent;
+  }
+
+  & .ng-arrow-wrapper .ng-arrow {
+    border-top-color: #fff;
+
+    &:hover {
+      border-top-color: #fff;
+    }
+  }
+}
+.ng-option {
+  height: 36px;
 }

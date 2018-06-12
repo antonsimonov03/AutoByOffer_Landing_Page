@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from '@core/components/login/login.component';
+import { SignupComponent } from '@core/components/signup/signup.component';
+import { CompleteProfileComponent } from '@core/components/complete-profile/complete-profile.component';
+import { AuthGuard } from '@core/guards/auth.guard';
 import { MainModule } from './main/main.module';
-import { ProductModule } from './product/product.module';
-import { LoginComponent } from './core/login/login.component';
-import { SignupComponent } from './core/signup/signup.component';
-import { CompleteProfileComponent } from './core/complete-profile/complete-profile.component';
-import { AuthGuard } from './core/services/auth.guard';
 
 const routes: Routes = [
-  { path: '', loadChildren: () => MainModule, pathMatch: 'full'},
-  { path: 'product', loadChildren: () => ProductModule },
+  { path: '', loadChildren: () => MainModule, pathMatch: 'full' },
+  { path: 'product', loadChildren: './product/product.module#ProductModule' },
+  { path: 'search', loadChildren: './search-products/search-products.module#SearchProductsModule' },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'complete-profile', component: CompleteProfileComponent, canActivate: [AuthGuard] },
